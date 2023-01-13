@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>DVD STORE</title>
+</head>
+<body>
+<h1>DVDStore : Votre boutique de DVD en ligne</h1>
+<br>
+<a th:href="@{/dvdstore/add-movie-form}">Ajouter un film</a>
+<br>
+<table align="center" border="2">
+<tr th:each="movie:${movies}">
+    <!--<td th:href="@{/webui/dvdstore/{id}(id=${movie.getNumberId()})}" th:text="${movie.getNumberId()}"/>-->
+    <td><a th:href="@{/dvdstore/{id}(id=${movie.getNumberId()})}" th:text="${movie.getNumberId()}"/></td>
+    <td th:text="${movie.getNumberId()}"/>
+    <td th:text="${movie.getTitle()}"/>
+    <td th:text="${movie.getGenre()}"/>
+</tr>
+</table>
+<br>
+<a style="alignment: center" href="/webui"> Home </a>
+</body>
+</html>

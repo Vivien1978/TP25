@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>DVD STORE</title>
+</head>
+<body>
+<h1>DVDStore : Votre boutique de DVD en ligne</h1>
+<br>
+<h3> Formulaire d'ajout de film</h3>
+
+<form method="post" th:action="@{/movie}" th:object="${movieForm}">
+
+    <p>Titre du film : <input type="text" th:field="*{title}"></p>
+    <div th:if="#fields.hasErrors('title')" th:errors="*{title}"></div>
+    <p>Genre du film : <select th:field="*{genre}">
+                            <option th:value="COMEDIE" th:text="Comédie"/>
+                            <option th:value="HORREUR" th:text="Horreur"></option>
+                            <option th:value="THRILLER" th:text="Thriller"></option>
+                            <option th:value="ACTION" th:text="Action"></option>
+                            <option th:value="ROMANTIQUE" th:text="Romantique"></option>
+                            <option th:value="DRAME" th:text="Drame"></option>
+                            <option th:value="ANIMATION" th:text="Animation"></option>
+    </select>
+    </p>
+
+    <input type="submit" value="Enregistrer">
+</form>
+<br>
+<a style="alignment: center" href="/webui"> Home </a>
+</body>
+</html>

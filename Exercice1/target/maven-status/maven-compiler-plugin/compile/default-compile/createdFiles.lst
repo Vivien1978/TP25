@@ -1,0 +1,8 @@
+org\udemy\exercice\entity\Movie.class
+org\udemy\exercice\repository\memory\MemoryMovieRepository.class
+org\udemy\exercice\repository\file\FileMovieRepository.class
+org\udemy\exercice\service\golive\GoLiveMovieService.class
+org\udemy\exercice\service\MovieServiceInterface.class
+org\udemy\exercice\controller\MovieControllerInterface.class
+org\udemy\exercice\repository\MovieRepositoryInterface.class
+org\udemy\exercice\service\defaut\DefaultMovieService.class

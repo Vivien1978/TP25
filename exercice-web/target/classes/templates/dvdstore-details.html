@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>DVD STORE</title>
+</head>
+<body>
+<h1>DVDStore : Votre boutique de DVD en ligne</h1>
+<h2>Détails</h2>
+
+<span th:text="${movie.getNumberId()}"/>
+<span th:text="${movie.getTitle()}"/>
+<span th:text="${movie.getGenre()}"/>
+
+<a style="alignment: center" href="/webui"> Home </a>
+</body>
+</html>
